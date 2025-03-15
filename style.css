@@ -1,0 +1,358 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+
+/* Fonts */
+
+@font-face {
+    font-family: 'Regards';
+    src: url('./fonts/regards.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Brix Slab';
+    src: url('./fonts/brixslab-regular.otf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Brix Slab';
+    src: url('./fonts/brixslab-light.otf');
+    font-weight: 200;
+    font-style: light;
+}
+
+@font-face {
+    font-family: 'Brix Slab';
+    src: url('./fonts/brixslab-bold.otf');
+    font-weight: 600;
+    font-style: bold;
+}
+
+a {
+    color: var(--red-brown);
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+strong {
+    font-weight: 600
+}
+
+/* Colours */
+
+:root {
+    --brown: rgb(65, 35, 15);
+    --moss: rgb(210, 240, 210);
+    --overlay: rgba(65, 35, 15, 0.4);
+    --red-brown: rgb(105, 25, 25);
+    --straw: rgb(252, 249, 237);
+}
+
+
+/* Navigation */
+
+nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    height: 80px;
+    padding: 0px 80px;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    background: white;
+    white-space: nowrap;
+    z-index: 1000;
+}
+
+nav .link {
+    color: var(--red-brown);
+    letter-spacing: 4px;
+    background-color: white;
+    line-height: 16px;
+    font-family: 'Brix Slab';
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 18px 20px 14px 24px;
+    margin: 0 16px;
+    border-radius: 32px;
+    border: 0;
+}
+
+nav .link:hover {
+    background-color: var(--moss);
+    transition: 0.25s ease-out;
+}
+
+.btn-cta {
+    position: block;
+    display: flex;
+    background-color: white;
+    color: var(--brown);
+    font-family: 'Regards';
+    font-size: 18px;
+    text-align: center;
+    height: 60px;
+    padding: 22px 48px 24px 48px;
+    border-radius: 32px;
+    border: 2px solid var(--red-brown);
+    box-shadow: 0 0px var(--red-brown);
+}
+
+.btn-cta:hover {
+    color: var(--red-brown);
+    background-color: var(--moss);
+    border: 2px solid var(--red-brown);
+    height: 64px;
+    box-shadow: 0 8px var(--red-brown);
+    transform: translateY(-10px);
+    transition: background-color 0.25s ease;
+
+}
+
+.btn-cta-wrapper {
+    display: flex;
+    align-items: baseline;
+    height: 60px;
+}
+
+/* Sections */
+
+#hero {
+    position: relative;
+    display: flex;
+    height: 720px;
+    background-image: url('./images/village.jpg');
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: top;
+    align-items: end;
+
+}
+
+.hero-overlay {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 64px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--overlay);
+
+}
+
+#activities {
+    display: flex;
+    background-color: var(--straw);
+    flex-direction: column;
+    gap: 32px;
+    padding: 48px 80px 64px 80px;
+}
+
+#guide {
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    gap: 32px;
+    padding: 48px 80px 64px 80px;
+}
+
+footer {
+    text-align: center;
+    background-color: var(--brown);
+    padding: 48px 80px;
+}
+
+/* Other */
+
+.div-title-large {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 32px;
+}
+
+.div-title-small {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.card-container {
+    display: flex;
+    gap: 32px;
+    align-self: stretch;
+    width: 100%;
+    flex-wrap: wrap;
+
+}
+
+.card-1, .card-2, .card-3, .card-4 {
+    display: flex;
+    align-items: end;
+    flex: 1 1 200px;
+    width: 100%;
+    padding: 32px;
+    border: 1px solid var(--red-brown);
+    border-radius: 8px;
+    box-shadow: 0px 8px var(--red-brown);
+}
+
+.card-1 {
+    background-image: url('./images/mill.jpg');
+    background-size: cover;
+    background-position: left;
+    height: 400px;
+}
+
+.card-2 {
+    background-image: url('./images/church.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+}
+
+.card-3 {
+    background-image: url('./images/house.png');
+    background-size: cover;
+    background-position: right;
+    height: 400px;
+}
+
+.card-frame:hover {
+    transform: translateY(-16px);
+    transition: 0.25s ease-out;
+}
+
+.card-4 {
+    background-color: white;
+    gap: 32px;
+    align-items: start;
+}
+
+.card-frame {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 32px;
+    padding: 32px;
+    width: 100%;
+    background-color: white;
+    border-radius: 32px;
+    orphans: 2;
+}
+
+.card-frame-transparent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    gap: 32px;
+    width: 100%;
+    height: 100%;
+    orphans: 2;
+}
+
+.avatar {
+    width: 35%;
+    aspect-ratio: 1 / 1;
+    max-width: 360px;
+    padding: 0;
+    margin: 0;
+    border-radius: 32px;
+    overflow: hidden;
+}
+
+.text-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 32px;
+    width: 100%;
+    orphans: 2;
+}
+
+.more {
+    color: var(--red-brown);
+    font-family: 'Brix Slab';
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    margin-top: 4px;
+}
+
+.link-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0;
+    margin: -6px 0;
+    white-space: nowrap;
+}
+
+/* Text */
+
+p {
+    margin: 0;
+    color: var(--red-brown);
+    opacity: 0.75;
+    font-family: 'Brix Slab';
+    font-weight: 400;
+}
+
+.foot {
+    color: var(--straw);
+}
+
+.supertitle {
+    color: white;
+    font-family: 'Brix Slab';
+    font-weight: 200;
+    text-transform: uppercase;
+    line-height: 16px;
+    letter-spacing: 8px;
+    margin-right: -6px;
+}
+
+h1 {
+    color: var(--straw);
+    font-family: 'Regards';
+    font-size: 96px;
+    letter-spacing: 4px;
+    margin: -6px;
+}
+
+h2 {
+    color: var(--brown);
+    font-family: 'Regards';
+    font-size: 32px;
+    letter-spacing: 0.5px;
+    margin: -6px 0;
+}
+
+h3 {
+    color: var(--brown);
+    font-family: 'Regards';
+    font-size: 24px;
+    letter-spacing: 0.2px;
+    margin: 0 0 -4px 0;
+}
